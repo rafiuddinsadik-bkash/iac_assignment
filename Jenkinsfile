@@ -22,6 +22,7 @@ pipeline{
             steps {
                 dir("Packer"){
                     sh "packer build packer.json"
+                    sh "echo $?"
                 }
             }
         }
